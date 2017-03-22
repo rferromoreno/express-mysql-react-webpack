@@ -1,14 +1,14 @@
 const router = require('express').Router()
 const ctrl = require('./controller')
 
-function onError(res) {
+function onError(err) {
 	res.status(400).json(err)
 }
 
 router.get('/all', (req, res) => {
 	ctrl.all().then((users) => {
 		res.status(200).json(users)
-	}, onError)
+	}, (err) => res.status(400).json(err))
 })
 
 router.post('/', (req, res) => {

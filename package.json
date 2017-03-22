@@ -5,7 +5,9 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch server server"
+    "dev": "nodemon --watch server server",
+    "prestart": "./node_modules/.bin/webpack --config webpack.config.js",
+    "start": "npm run dev"
   },
   "author": "",
   "license": "ISC",
