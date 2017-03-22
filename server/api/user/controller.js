@@ -10,3 +10,7 @@ module.exports.create = function (unsafeData) {
 	const age = unsafeData.age
 	return User.create({ name: name, age: age })
 }
+
+module.exports.findById = function (unsafeData) {
+	return User.findById(unsafeData)
+}

@@ -1,4 +1,4 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('prueba', 'root', '123')
+const sequelize = new Sequelize('prueba', 'root', '1234')
 
 module.exports = sequelize
